@@ -49,8 +49,14 @@ start_time_func = timeit.default_timer()
 python_result = pythonFunc()
 end_time_func = timeit.default_timer()
 
+print(f"Всего вариантов (algorithm): {len(algorithm_result)}")
+print(f"time (algorithm): {end_time_algo - start_time_algo:.6f} секунд")
 
-# Вывод первых 10 вариантов для наглядности:
+print(f"\nВсего вариантов (PythonFunc): {len(python_result)}")
+print(f"Время (PythonFunc): {end_time_func - start_time_func:.6f} секунд")
+
+
+#первых 10 вариантов
 print("\nПервые 10 вариантов заполнения (алгоритмический способ):")
 for i, variant in enumerate(algorithm_result[:10], 1):
     print(f"{i}. Спец1: {variant[0]}, Спец2: {variant[1]}, Спец3: {variant[2]}")
