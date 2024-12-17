@@ -1,3 +1,4 @@
+# 5.	F(x<2) = 100; F(n) = (-1)^n*(F(n-1)/n! + F(n//5) /(2n)!)
 import timeit
 import math
 
