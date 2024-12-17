@@ -1,4 +1,5 @@
-# 5.	F(x<2) = 100; F(n) = (-1)^n*(F(n-1)/n! + F(n//5) /(2n)!)
+#F(x<2) = 100; F(n) = (-1)n*(F(n-1)/n! + F(n//5) /(2n)!)
+
 import timeit
 import math
 
@@ -11,23 +12,24 @@ def Fr(n):
 def Fi(n):
     if n == 0 or n == 1:
         return 1
-    F_0 = 1        # F(0)
-    F_1 = 1        # F(1)
-    factorial_n = 1       # n!
-    factorial_2n = 1      # (2n)!
+
+    F0 = 1
+    F1 = 1
+    Fn = 1
     minus = -1
+    fact_n = 1
+    fact_2n = 1 
 
-    i = 2  # начало с n=2
-    while i <= n:
-        factorial_n *= i
-        factorial_2n *= (2 * i - 1) * (2 * i)
-        F_n = minus * (F_1 / factorial_n - F_0 / factorial_2n)
+    for i in range(2, n + 1):
+        fact_n *= i
+        fact_2n *= (2 * i - 1) * (2 * i)
+        Fn = minus * (F1 / fact_n - F0 / fact_2n)
 
-        F_0, F_1 = F_1, F_n
+        F0, F1 = F1, Fn
         minus *= -1
-        i += 1  
 
-    return F_n
+    return Fn
+
 
 print(f"{'n':<5} {'recursive time (s)':<20} {'iterative time (s)':<20} {'recursive result':<20} {'iterative result':<20}")
 
