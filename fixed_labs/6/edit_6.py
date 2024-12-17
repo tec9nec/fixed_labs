@@ -53,7 +53,7 @@ print(f"Всего вариантов (algorithm): {len(algorithm_result)}")
 print(f"time (algorithm): {end_time_algo - start_time_algo:.6f} секунд")
 
 print(f"\nВсего вариантов (PythonFunc): {len(python_result)}")
-print(f"Время (PythonFunc): {end_time_func - start_time_func:.6f} секунд")
+print(f"time (PythonFunc): {end_time_func - start_time_func:.6f} секунд")
 
 
 #первых 10 вариантов
