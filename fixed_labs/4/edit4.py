@@ -20,7 +20,7 @@ def words(number):
 def process_file(open_file):
     with open(open_file, 'r', encoding='utf-8') as file:
         content = file.read()
-        matches = re.findall(r'(?<!\S)-?\d+(?!\S)', content)
+        matches = re.findall(r'(?<!\S)-?\d{1,5}(?!\S)', content)
         
         even_numbers = [] 
         for num in matches:
