@@ -52,7 +52,6 @@ for i in range(n):
     for j in range(n):
         f[i][j] = a[i][j] # copy a in f
 
-print_mat(f, "F")
 
 # проверка симметрии области 1
 symmetrical = True
@@ -71,7 +70,7 @@ if symmetrical:
         for j in range(n // 2):
             f[i][j], f[i + n // 2][j] = f[i + n // 2][j], f[i][j] # область 1 - область 3
             
-#print_mat(f, "F")
+print_mat(f, "F")
 
 
 
