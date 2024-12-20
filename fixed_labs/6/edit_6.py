@@ -85,11 +85,10 @@ print(f"time (algorithm_manual): {end_time_algo - start_time_algo:.6f} секу�
 print(f"\nВсего вариантов (PythonFunc): {len(python_result)}")
 print(f"time (PythonFunc): {end_time_func - start_time_func:.6f} секунд")
 
-# первые 10
-print("\nПервые 50 вариантов заполнения (алгоритмический):")
-for i, variant in enumerate(algorithm_result[:50], 1):
+print("\варианты заполнения (алгоритмический):")
+for i, variant in enumerate(algorithm_result, 1):
     print(f"{i}. Спец1: {variant[0]}, Спец2: {variant[1]}, Спец3: {variant[2]}")
 
-print("\nПервые 50 вариантов заполнения (функции питон):")
-for i, variant in enumerate(python_result[:50], 1):
+print("\nварианты заполнения (функции питон):")
+for i, variant in enumerate(python_result, 1):
     print(f"{i}. Спец1: {variant[0]}, Спец2: {variant[1]}, Спец3: {variant[2]}")
